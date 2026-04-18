@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monsieur Cuisine Smart - Recetario Dinámico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🍳 Monsieur Cuisine Smart</h1>
+            <p>Extractor de Recetas Dinámico</p>
+        </header>
+
+        <section class="search-panel">
+            <div class="search-box">
+                <input type="text" id="search" placeholder="Pega un enlace de receta o busca por nombre...">
+                <button id="searchWebBtn" class="btn-primary">Extraer Receta</button>
+            </div>
+            <p class="hint">Fuentes sugeridas: monsieur-cuisine.com, Cookidoo, blogs de cocina.</p>
+        </section>
+
+        <div id="results" class="results-container">
+            <!-- Las recetas extraídas aparecerán aquí -->
+            <div class="empty-state">
+                <p>Ingresa una URL de una receta para empezar a extraer datos reales.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para ver pasos detallados -->
+    <div id="recipeModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
